@@ -4,7 +4,7 @@
     <%= render 'upload_form' %>
 </div>
 <br><br><br>
-<div class="posts">
+<div id="my-posts" class="posts">
     <% @posts.each do |post| %>
         <section class="post">
             <div style="height:50%;width:50%;margin:auto;">
@@ -12,4 +12,8 @@
             </div>
         </section>
     <% end %>
+</div>
+
+<div id="infinite-scrolling">
+  <%= will_paginate @posts %>
 </div>
