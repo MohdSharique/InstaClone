@@ -1,1 +1,15 @@
 <h1 style="text-align:center;">This is my Instagram Feed</h1>
+
+<div class='form-upload'>
+    <%= render 'upload_form' %>
+</div>
+<br><br><br>
+<div class="posts">
+    <% @posts.each do |post| %>
+        <section class="post">
+            <div style="height:50%;width:50%;margin:auto;">
+                <%= image_tag post.image, class: 'main-image' %>
+            </div>
+        </section>
+    <% end %>
+</div>
