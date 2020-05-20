@@ -7,6 +7,8 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 
 gem 'font-awesome-sass'
+# For authentication
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
