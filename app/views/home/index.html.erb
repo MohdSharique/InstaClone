@@ -1,1 +1,19 @@
 <h1 style="text-align:center;">This is my Instagram Feed</h1>
+
+<div class='form-upload'>
+    <%= render 'upload_form' %>
+</div>
+<br><br><br>
+<div id="my-posts" class="posts">
+    <% @posts.each do |post| %>
+        <section class="post">
+            <div style="height:50%;width:50%;margin:auto;">
+                <%= link_to image_tag(post.image.url, class: 'media-object'), post.image.url, target: '_blank' %>
+            </div>
+        </section>
+    <% end %>
+</div>
+
+<div id="infinite-scrolling">
+  <%= will_paginate @posts %>
+</div>
