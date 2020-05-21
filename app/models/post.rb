@@ -1,9 +1,10 @@
 class Post < ApplicationRecord
     belongs_to :user
 
-    has_one_attached :image
+    has_attached_file :image
 
-    validate :image_presence
+    validates_attachment :image,
+    content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
     
     def image_presence
         errors.add(:image, "can't be blank") unless image.attached?

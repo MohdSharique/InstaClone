@@ -8,7 +8,7 @@
     <% @posts.each do |post| %>
         <section class="post">
             <div style="height:50%;width:50%;margin:auto;">
-                <%= image_tag post.image, class: 'main-image' %>
+                <%= link_to image_tag(post.image.url, class: 'media-object'), post.image.url, target: '_blank' %>
             </div>
         </section>
     <% end %>
