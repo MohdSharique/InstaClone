@@ -7,7 +7,7 @@
 <div id="my-posts" class="posts">
     <% @posts.each do |post| %>
         <section class="post">
-            <div style="height:50%;width:50%;margin:auto;">
+            <div class='image-view'>
                 <%= link_to image_tag(post.image.url, class: 'media-object'), post.image.url, target: '_blank' %>
             </div>
         </section>
